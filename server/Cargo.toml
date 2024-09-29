@@ -1,0 +1,10 @@
+[package]
+name = "snippets-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+serde = { version = "1.0.210", features = ["derive"] }
