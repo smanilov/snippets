@@ -21,7 +21,7 @@ struct StorageData {
 #[post("/get_session")]
 async fn get_session(
     app_data: Data<Mutex<StorageData>>,
-    request: web::Json<GetSessionRequest>,
+    request: web::Form<GetSessionRequest>,
 ) -> impl Responder {
     info!("Reached handler app_data={app_data:?} request={request:?}");
     match app_data.lock() {
